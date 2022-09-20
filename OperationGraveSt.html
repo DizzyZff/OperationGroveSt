@@ -1,0 +1,118 @@
+<!doctype html> 
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            Operation Grave St
+        </title>
+        <script src="https://kit.fontawesome.com/a5053a6822.js" crossorigin="anonymous"></script>
+        <style>
+            #background{
+                position: fixed;
+                left: 0%;
+                top: 0%;
+                width: 100%;
+                height: 100%;
+            }
+            #title{
+                position: fixed;
+                top: 30%;
+                font:6em sans-serif;
+                text-align: center;
+                color: white;
+                width: 100%;
+            }
+            #timer{
+                position: fixed;
+                top: 20%;
+                font-size: 500px;
+                font: 6em sans-serif;
+                text-align: center;
+                color: white;
+                width: 100%;
+            }
+            #img1{
+                position: fixed;
+                width: 35%;
+                rotate: 20deg;
+                bottom: 0%;
+                right: 68%
+            }
+            #img2{
+                position: fixed;
+                width: 20%;
+                rotate: 0deg;
+                bottom: 0;
+                left: 0;
+                top: 0%;
+            }
+            #img3{
+                position: fixed;
+                width: 20%;
+                rotate: 0deg;
+                bottom: 0;
+                right: 0;
+                top: 0%;
+            }
+            #img4{
+                position: fixed;
+                width: 30%;
+                rotate: 0deg;
+                bottom: 0;
+                right: 40%;
+
+            }
+            #img5{
+                position: fixed;
+                width: 20%;
+                rotate: 15deg;
+                bottom: -10%;
+                right: 0%;
+
+            }
+            #img6{
+                position: fixed;
+                width: 20%;
+                rotate: 0deg;
+                bottom: 0%;
+                left: 60%;
+
+            }
+        </style>
+    </head>
+    <body>
+        <img id="background" src="./images/greg-rosenke-6QnEf_b47eA-unsplash.jpg" alt="">
+        <img id="img2" src="./images/disneyjune.jpg" alt="">
+        <p id="timer"></p>
+        <p id="title">till da day!</p>
+        <img id="img1" src="./images/SakApr.jpg" alt="">
+        <img id="img3" src="./images/IMG_1340.JPG" alt="">
+        <img id="img4" src="./images/IMG_1871.JPG" alt="">
+        <img id="img5" src="./images/IMG_1910.JPG" alt="">
+        <img id="img6" src="./images/IMG_5154.JPG" alt="">
+        <script>
+            var countDownDate = new Date("Oct 13, 2022 12:00:00").getTime();
+            var x = setInterval(function() {
+
+            // Get today's date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("timer").innerHTML = days + "d " + hours + "h "  + minutes + "m " + seconds + "s ";
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("timer").innerHTML = "Happy Birthday!";
+                document.getElementById("title").innerHTML = "";
+            }
+        }, 1000);
+        </script>
+    </body>
+</html>
